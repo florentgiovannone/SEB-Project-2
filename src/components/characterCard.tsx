@@ -1,23 +1,27 @@
+import { Link } from "react-router-dom"
 
-interface ICharacterProps { firstName: string, lastName: string, image: string, title: string, familly: string } 
+interface ICharacterProps { id?: number, firstName: string, lastName: string, fullName: string, image: string, title: string, family: string } 
 
-function CharacterCard({ firstName, lastName, image, title, familly }: ICharacterProps) {
-return <>
-return 
+function CharacterCard({firstName, fullName, image, title, family }: ICharacterProps) {
+return <> 
 <section>
-
-    <div className="card">
-    <div className="card-header">
-        <div className="card-header-title">{firstName}</div>
-    </div>
-    <div className="card-image">
-        <figure className="image image-is-1by1">
-        <img className="cheese" src={image} alt={`${firstName}, ${lastName}`} />
-        </figure>
-        <div>{title}</div>
-        <div>{familly}</div>
-    </div>
-    </div>
+    <Link to={`/characters/${firstName}`}>
+    <div style={{height: 420, width:200}} className="card  m-1">
+        <div className="card-header-title ">{fullName}</div>
+            <div className="card-imagep1 p-2">
+                <figure className="image image is-square">
+                    <img className="is-rounded" src={image} alt={fullName} />
+                </figure> 
+                <div className="block">
+                    <div className="has-text-centered has-text-weight-bold">{`Title:`}</div>
+                    <div className="has-text-centered mb-3"> {title}</div>
+                </div>
+                <div className="block">
+                    <div className="has-text-centered has-text-weight-bold">{`Family:`}</div>
+                    <div className="has-text-centered">{family}</div>
+                </div>
+            </div>
+    </div></Link>
 </section>
 </>
 }

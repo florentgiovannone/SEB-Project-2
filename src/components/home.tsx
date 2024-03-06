@@ -6,13 +6,15 @@ return <>
       
     <div className="hero-body has-text-centered">
         <div className="container">
-              <Link  to="/characters">
+              
         <div className="card">
+            <Link  to="/characters">
   <div className="card-image">
     <figure className="image">
       <img src="./assets/images/game-of-thrones-1-1920x1080.webp" alt="Placeholder image"/>
     </figure>
   </div>
+  </Link>
   <div className="card-content">
     <div className="media">
       <div className="media-content">
@@ -31,7 +33,7 @@ return <>
     target="_blank">To lmbd</a>
     </div>
   </div>
-</div></Link>
+</div>
         </div>
     </div>
     </section>

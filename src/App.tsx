@@ -4,8 +4,8 @@ import Home from "./components/home";
 import Navbar from "./components/nav";
 import Footer from "./components/footer";
 import SignIn from "./components/sign-in";
-import CharacterCard from "./components/characterCard";
 import Characters from "./components/characters";
+import CharacterModal from "./components/CharacterModal";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path="/characters" element={<Characters />} />
           <Route
             path="/characters/:charactersName"
-            element={<CharacterCard />}
+            element={<CharacterModal />}
           />
           <Route path="/sign-in" element={<SignIn />} />
         </Routes>
