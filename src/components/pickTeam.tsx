@@ -23,7 +23,7 @@ function PickTeam() {
   }
 
   function keepChar() {
-    if (team.length < 6 && char) {
+    if (team.length < 4 && char) {
       const teamClone = structuredClone(team);
       teamClone.push(char);
       setTeam(teamClone);
@@ -59,7 +59,7 @@ function PickTeam() {
                 <div className="content">
                   <p className="title">Instructions:</p>
                   <p className="subtitle">
-                    Assemble a specialized team of six characters from the "Game
+                    Assemble a specialized team of four characters from the "Game
                     of Thrones" universe with the singular goal of defeating the
                     White Walkers and ensuring the safety and future of the
                     Seven Kingdoms.
@@ -70,7 +70,7 @@ function PickTeam() {
             </div>
           </div>
           <div className="column">
-            <div className="container">
+            <div className="container centered-content">
               <h2 className="title">{char ? `${char.fullName}!` : ""}</h2>
               {char && (
                 <CharacterCard
@@ -79,23 +79,23 @@ function PickTeam() {
                   firstName={char.firstName}
                   lastName={char.lastName}
                   fullName={char.fullName}
-                  image={char.imageUrl} // Make sure this matches the expected prop in your CharacterCard
+                  image={char.imageUrl}
                   title={char.title}
                   family={char.family}
                 />
               )}
             </div>
-            <div className="container mb-6">
-              <button onClick={fetchChar} className="button is-large is-danger">
+            <div className="container mb-6 mt-6 centered-buttons ">
+              <button onClick={fetchChar} className="button is-large is-dark">
                 New Character
               </button>
-              <button className="button is-large is-info" onClick={keepChar}>
+              <button className="button is-large is-primary ml-6" onClick={keepChar}>
                 Add to team
               </button>
             </div>
-            <div className="container">
+            <div className="container centered-content">
               <p className="title">Your team...</p>
-              <div className="columns is-multiline is-one-third">
+              <div className="columns is-multiline is-one-third ">
                 {team.map((character) => {
                   return (
                     <CharacterCard
