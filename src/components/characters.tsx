@@ -42,7 +42,6 @@ console.log(character)
             title={character?.title}
             family={character?.family}
     />
-
 })}
     </div>
     </div>

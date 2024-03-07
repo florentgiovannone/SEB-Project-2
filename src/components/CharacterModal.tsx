@@ -38,8 +38,9 @@ return <section>
             <h1>Wecome to Westeros!!</h1>
         </div>
         <div className="columns is-centered m-6">
-            <CharacterCard 
+            <CharacterCard
             key={character.firstName}
+            id={character.id}
             firstName={character.firstName}
             lastName={character.lastName}
             fullName={character.fullName}
