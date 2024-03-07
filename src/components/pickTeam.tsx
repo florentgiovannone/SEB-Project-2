@@ -79,7 +79,7 @@ function PickTeam() {
                   firstName={char.firstName}
                   lastName={char.lastName}
                   fullName={char.fullName}
-                  image={char.imageUrl} // Make sure this matches the expected prop in your CharacterCard
+                  image={char.imageUrl} 
                   title={char.title}
                   family={char.family}
                 />
