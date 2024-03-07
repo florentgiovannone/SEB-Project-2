@@ -1,5 +1,18 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom"
+import CharacterCard from "./characterCard"
 
+interface CharacterCard { 
+    "id": Number
+    "firstName": string
+    "lastName": string
+    "fullName": string,
+    "imageUrl": string
+    "title": string
+    "family": string 
+} 
+
+type Characters = null | Array<CharacterCard>
 function Navbar() {
   return (
     <>

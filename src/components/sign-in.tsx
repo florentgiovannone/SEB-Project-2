@@ -1,39 +1,39 @@
 function SignIn() {
-return (
+  return (
     <>
-    <section className="section is-large hero is-fullheight-with-navbar">
+      <section className="section is-large hero is-fullheight-with-navbar">
         <div className="columns is-centered ">
-        <div className="column is-10-mobile is-8-tablet is-5-desktop is-4-widescreen is-3-fullhd">
+          <div className="column is-10-mobile is-8-tablet is-5-desktop is-4-widescreen is-3-fullhd">
             <form className="box ">
-            <div className="field">
+              <div className="field">
                 <label className="label">Email</label>
                 <div className="control">
-                <input
+                  <input
                     className="input"
                     type="email"
                     placeholder="e.g. name@example.com"
-                />
+                  />
                 </div>
-            </div>
+              </div>
 
-            <div className="field">
+              <div className="field">
                 <label className="label">Password</label>
                 <div className="control">
-                <input
+                  <input
                     className="input"
                     type="password"
                     placeholder="***********"
-                />
+                  />
                 </div>
-            </div>
+              </div>
 
-            <button className="button is-dark">Sign in</button>
+              <button className="button is-dark">Sign in</button>
             </form>
+          </div>
         </div>
-        </div>
-    </section>
+      </section>
     </>
-);
+  );
 }
 
 export default SignIn;
