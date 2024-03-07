@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
 
-interface ICharacterProps { id?: number, firstName: string, lastName: string, fullName: string, image: string, title: string, family: string } 
+interface ICharacterProps { id?: Number, firstName: string, lastName: string, fullName: string, image: string, title: string, family: string } 
 
-function CharacterCard({firstName, fullName, image, title, family }: ICharacterProps) {
+function CharacterCard({id, fullName, image, title, family }: ICharacterProps) {
+    console.log(id)
 return <> 
 <section>
-    <Link to={`/characters/${firstName}`}>
+    <Link to={`/characters/${id}`}>
     <div style={{height: 420, width:200}} className="card  m-1">
         <div className="card-header-title ">{fullName}</div>
             <div className="card-imagep1 p-2">

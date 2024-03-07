@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import CharacterCard from "./characterCard"
 
 interface CharacterCard { 
-    "id": number
+    "id": Number
     "firstName": string
     "lastName": string
     "fullName": string,
@@ -31,9 +31,10 @@ return<section>
     <div className="columns is-multiline is-centered m-">
 
     {character?.map((character) => {
-
+console.log(character)
         return <CharacterCard 
-            key={character?.id}
+            key={character?.firstName}
+            id={character?.id}
             firstName={character?.firstName}
             lastName={character?.lastName}
             fullName={character?.fullName}
@@ -41,6 +42,7 @@ return<section>
             title={character?.title}
             family={character?.family}
     />
+
 })}
     </div>
     </div>
