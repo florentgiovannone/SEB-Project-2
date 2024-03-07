@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 interface ICharacterProps { id?: Number, firstName: string, lastName: string, fullName: string, image: string, title: string, family: string } 
 
 function CharacterCard({id, fullName, image, title, family }: ICharacterProps) {
-    console.log(id)
+    console.log(fullName)
 return <> 
 <section>
     <Link to={`/characters/${id}`}>
