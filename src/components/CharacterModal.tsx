@@ -1,46 +1,40 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
-import CharacterCard from "./characterCard";
+import React from "react"
+import { Link } from "react-router-dom"
+import { useParams } from "react-router-dom"
+import CharacterCardModal from "./characterCardModal"
 
-interface CharacterCard {
-  id: Number;
-  firstName: string;
-  lastName: string;
-  fullName: string;
-  imageUrl: string;
-  title: string;
-  family: string;
+interface CharacterCard { 
+    "id": Number
+    "firstName": string
+    "lastName": string
+    "fullName": string,
+    "imageUrl": string
+    "title": string
+    "family": string 
 }
 
-type Characters = null | CharacterCard;
+type Characters = null | CharacterCard
 
-function CharacterModal() {
-  const [character, setcharacter] = React.useState<Characters>(null);
-  const { charactersName } = useParams();
-  console.log(character);
-  React.useEffect(() => {
+function CharacterModal(){
+const [character, setcharacter] = React.useState<Characters>(null)
+const { charactersName } = useParams()
+console.log(character)
+React.useEffect(() => {
     async function fetchCharacter() {
-      const resp = await fetch(
-        `https://thronesapi.com/api/v2/characters/${charactersName}`
-      );
-      const data = await resp.json();
-      setcharacter(data);
+        const resp = await fetch(`https://thronesapi.com/api/v2/characters/${charactersName}`)
+        const data = await resp.json()
+        setcharacter(data)
     }
-    fetchCharacter();
-  }, []);
+    fetchCharacter()
+}, [])
 
-  if (!character) {
-    return <p>Character Loading....</p>;
-  }
-  return (
-    <section>
-      <div className="container has-text-centered m-6">
-        <div className="title columns is-multiline is-centered m-6">
-          <h1>Wecome to Westeros!!</h1>
-        </div>
-        <div className="columns is-centered m-6">
-          <CharacterCard
+
+if (!character) {
+    return <p>Character Loading....</p>
+}
+  return <section className="has-text-centered">
+<h1 className="title m-6">Welcome to the 7 kingdoms</h1>
+            <CharacterCardModal
             key={character.firstName}
             id={character.id}
             firstName={character.firstName}
@@ -48,13 +42,9 @@ function CharacterModal() {
             fullName={character.fullName}
             image={character.imageUrl}
             title={character.title}
-            family={character.family}
-          />
-        </div>
-        <Link to="/characters">{`Back to Character List`}</Link>
-      </div>
-    </section>
-  );
+            family={character.family} />
+      <Link className="title has-text-black" to="/characters">{`Back to Character List`}</Link>
+</section>
 }
 
-export default CharacterModal;
+export default CharacterModal
