@@ -26,6 +26,9 @@ function Navbar() {
               <Link className="navbar-item" to="/characters">
                 Characters
               </Link>
+              <Link className="navbar-item" to="/pickteam">
+                Pick Team
+              </Link>
               <Link className="navbar-item" to="/sign-in">
                 Sign-in
               </Link>

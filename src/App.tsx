@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import SignIn from "./components/sign-in";
 import Characters from "./components/characters";
 import CharacterModal from "./components/CharacterModal";
+import PickTeam from "./components/pickTeam";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             path="/characters/:charactersName"
             element={<CharacterModal />}
           />
+          <Route path="/pickteam" element={<PickTeam />} />
           <Route path="/sign-in" element={<SignIn />} />
         </Routes>
       </main>
