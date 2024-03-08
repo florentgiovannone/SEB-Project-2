@@ -11,7 +11,7 @@ return <>
             <Link  to="/characters">
   <div className="card-image">
     <figure className="image">
-      <img src="./assets/images/game-of-thrones-1-1920x1080.webp" alt="Placeholder image"/>
+      <img src="./assets/images/Got.webp" alt="Placeholder image"/>
     </figure>
   </div>
   </Link>
