@@ -7,6 +7,7 @@ import SignIn from "./components/sign-in";
 import Characters from "./components/characters";
 import CharacterModal from "./components/CharacterModal";
 import PickTeam from "./components/pickTeam";
+import image from "./assets/images/Got.webp"
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <Navbar />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home
+          image={image as any} />} />
           <Route path="/characters" element={<Characters />} />
           <Route
             path="/characters/:charactersName"
