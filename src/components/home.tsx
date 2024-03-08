@@ -42,7 +42,7 @@ function Home({image}: iImage) {
                     href="https://www.imdb.com/title/tt0944947/"
                     target="_blank"
                   >
-                    To lmbd
+                    <p className="title is-4">To IMDb</p>
                   </a>
                 </div>
               </div>
