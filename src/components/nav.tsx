@@ -32,7 +32,7 @@ function Navbar() {
                 Characters
               </Link>
               <Link className="navbar-item" to="/pickteam">
-                Pick Team
+                To Battle
               </Link>
             </div>
             <div className="navbar-end">

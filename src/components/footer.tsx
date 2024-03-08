@@ -11,6 +11,9 @@ function Footer() {
           <Link className="m-6 has-text-white " to="/characters">
             Characters
           </Link>
+          <Link className="m-6 has-text-white" to="/pickteam">
+            To Battle
+          </Link>
           <Link className="m-6 has-text-white" to="/sign-in">
             Sign-in
           </Link>

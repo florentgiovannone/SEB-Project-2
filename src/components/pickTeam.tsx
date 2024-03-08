@@ -72,8 +72,9 @@ function PickTeam() {
                     Seven Kingdoms. In the face of such unprecedented danger, a
                     mission of utmost importance has been conceived: to assemble
                     a specialized team, comprising six valiant characters from
-                    across the diverse and expansive "Game of Thrones" universe. <br />
-<br />
+                    across the diverse and expansive "Game of Thrones" universe.{" "}
+                    <br />
+                    <br />
                     This select group, brought together not by birthright or
                     allegiance but by purpose and necessity, is tasked with a
                     singular, pivotal goal: to defeat the White Walkers,
@@ -85,8 +86,8 @@ function PickTeam() {
                     confronting the darkness that encroaches from beyond the
                     Wall. <br />
                     <br />
-                     With stakes higher than the towering peaks of the
-                    Eyrie, this team must navigate the complexities of their own
+                    With stakes higher than the towering peaks of the Eyrie,
+                    this team must navigate the complexities of their own
                     diverse backgrounds, alliances, and conflicts, uniting under
                     the common cause of survival and preservation. The mission
                     ahead is fraught with peril, demanding sacrifices and feats
@@ -167,7 +168,6 @@ function PickTeam() {
               />
             </p>
           </div>
-          <button className="modal-close is-large" aria-label="close"></button>
         </div>
       </section>
     </>
