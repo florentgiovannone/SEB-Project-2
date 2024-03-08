@@ -42,7 +42,7 @@ function Characters() {
         <div className="columns is-centered">
           <div className="container">
             <input
-              className="input mb-6 mt-6 is-rounded "
+              className="input is-dark mb-6 mt-6 is-rounded "
               placeholder="Search character..."
               onChange={handleChange}
               value={search}
