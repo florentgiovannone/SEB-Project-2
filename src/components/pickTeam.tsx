@@ -55,19 +55,20 @@ function PickTeam() {
         <div className="columns">
           <div className="column">
             <div className="tile is-parent">
-              <article className="tile is-child notification is-danger">
+              <article className="tile is-child notification is-dark">
                 <div className="content">
                   <p className="title">Instructions:</p>
                   <p className="subtitle">
-                    Assemble a specialized team of four characters from the "Game
-                    of Thrones" universe with the singular goal of defeating the
-                    White Walkers and ensuring the safety and future of the
-                    Seven Kingdoms.
+                    Assemble a specialized team of four characters from the
+                    "Game of Thrones" universe with the singular goal of
+                    defeating the White Walkers and ensuring the safety and
+                    future of the Seven Kingdoms.
                   </p>
                   <div className="content"></div>
                 </div>
               </article>
             </div>
+                <div className="column mt-6"><button className="button">Start your mission</button></div>
           </div>
           <div className="column">
             <div className="container centered-content">
@@ -89,7 +90,10 @@ function PickTeam() {
               <button onClick={fetchChar} className="button is-large is-dark">
                 New Character
               </button>
-              <button className="button is-large is-primary ml-6" onClick={keepChar}>
+              <button
+                className="button is-large is-primary ml-6"
+                onClick={keepChar}
+              >
                 Add to team
               </button>
             </div>
