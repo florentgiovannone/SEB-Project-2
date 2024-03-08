@@ -23,7 +23,7 @@ function PickTeam() {
   }
 
   function keepChar() {
-    if (team.length < 4 && char) {
+    if (team.length < 6 && char) {
       const teamClone = structuredClone(team);
       teamClone.push(char);
       setTeam(teamClone);
@@ -59,19 +59,21 @@ function PickTeam() {
                 <div className="content">
                   <p className="title">Instructions:</p>
                   <p className="subtitle">
-                    Assemble a specialized team of four characters from the
-                    "Game of Thrones" universe with the singular goal of
-                    defeating the White Walkers and ensuring the safety and
-                    future of the Seven Kingdoms.
+                    Assemble a specialized team of six characters from the "Game
+                    of Thrones" universe with the singular goal of defeating the
+                    White Walkers and ensuring the safety and future of the
+                    Seven Kingdoms.
                   </p>
                   <div className="content"></div>
                 </div>
               </article>
             </div>
-                <div className="column mt-6"><button className="button">Start your mission</button></div>
+            <div className="container mt-6 centered-content">
+              <button className="button is-dark">Start your mission</button>
+            </div>
           </div>
           <div className="column">
-            <div className="container centered-content">
+            <div className="container centered-content ">
               <h2 className="title">{char ? `${char.fullName}!` : ""}</h2>
               {char && (
                 <CharacterCard
@@ -99,7 +101,7 @@ function PickTeam() {
             </div>
             <div className="container centered-content">
               <p className="title">Your team...</p>
-              <div className="columns is-multiline is-one-third ">
+              <div className="columns is-multiline is-one-third  ">
                 {team.map((character) => {
                   return (
                     <CharacterCard
