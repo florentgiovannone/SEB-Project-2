@@ -16,6 +16,7 @@ interface CharacterCard {
 function PickTeam() {
   const [char, setChar] = React.useState(null);
   const [team, setTeam] = React.useState([]);
+  const [isModalopen, setIsModalOpen] = React.useState(false);
 
   function getRandomChar() {
     const randomNumber = Math.floor(Math.random() * 52) + 1;
@@ -44,6 +45,10 @@ function PickTeam() {
     fetchChar();
   }, []);
 
+  function handleClick() {
+    setIsModalOpen(true);
+  }
+
   return (
     <>
       <section className="section is-small">
@@ -59,17 +64,49 @@ function PickTeam() {
                 <div className="content">
                   <p className="title">Instructions:</p>
                   <p className="subtitle">
-                    Assemble a specialized team of six characters from the "Game
-                    of Thrones" universe with the singular goal of defeating the
-                    White Walkers and ensuring the safety and future of the
-                    Seven Kingdoms.
+                    In the rich and tumultuous world of Westeros, a dire threat
+                    looms over the horizon, casting a shadow colder than winter
+                    itself. The White Walkers, beings of ancient legend and
+                    nightmares made flesh, have risen from the frozen depths
+                    beyond the Wall, aiming to bring an endless night across the
+                    Seven Kingdoms. In the face of such unprecedented danger, a
+                    mission of utmost importance has been conceived: to assemble
+                    a specialized team, comprising six valiant characters from
+                    across the diverse and expansive "Game of Thrones" universe. <br />
+<br />
+                    This select group, brought together not by birthright or
+                    allegiance but by purpose and necessity, is tasked with a
+                    singular, pivotal goal: to defeat the White Walkers,
+                    safeguarding the realm from their icy grasp and ensuring the
+                    safety and future of the Seven Kingdoms. Each member, chosen
+                    at random by the fates—or in this case, the algorithmic
+                    whims of a project—brings unique skills, wisdom, and power
+                    to the ensemble, creating a formidable force capable of
+                    confronting the darkness that encroaches from beyond the
+                    Wall. <br />
+                    <br />
+                     With stakes higher than the towering peaks of the
+                    Eyrie, this team must navigate the complexities of their own
+                    diverse backgrounds, alliances, and conflicts, uniting under
+                    the common cause of survival and preservation. The mission
+                    ahead is fraught with peril, demanding sacrifices and feats
+                    of bravery that will be sung about in the songs of bards for
+                    ages to come. This is not just a battle for the present but
+                    a fight for the very essence of life and light in the world
+                    of Westeros. Together, these six characters must forge a
+                    path through the darkness, facing creatures of death and
+                    desolation, in hopes of bringing forth a dawn that once
+                    again lights up the Seven Kingdoms with warmth, peace, and
+                    prosperity.
                   </p>
                   <div className="content"></div>
                 </div>
               </article>
             </div>
             <div className="container mt-6 centered-content">
-              <button className="button is-dark">Start your mission</button>
+              <button className="button is-dark" onClick={handleClick}>
+                Start your mission
+              </button>
             </div>
           </div>
           <div className="column">
@@ -119,6 +156,18 @@ function PickTeam() {
               </div>
             </div>
           </div>
+        </div>
+        <div className={isModalopen ? "modal is-active" : "modal"}>
+          <div className="modal-background"></div>
+          <div className="modal-content">
+            <p className="image is-4by3" onClick={() => setIsModalOpen(false)}>
+              <img
+                src="https://media1.tenor.com/m/qVo1fXeQtTMAAAAd/bornskywalker-jon-snow.gif"
+                alt=""
+              />
+            </p>
+          </div>
+          <button className="modal-close is-large" aria-label="close"></button>
         </div>
       </section>
     </>
