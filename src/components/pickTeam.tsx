@@ -14,9 +14,9 @@ interface CharacterCard {
 }
 
 function PickTeam() {
-  const [char, setChar] = React.useState(null);
-  const [team, setTeam] = React.useState([]);
-  const [isModalopen, setIsModalOpen] = React.useState(false);
+  const [char, setChar] = React.useState(null as any);
+  const [team, setTeam] = React.useState([] as any);
+  const [isModalopen, setIsModalOpen] = React.useState(false as any);
 
   function getRandomChar() {
     const randomNumber = Math.floor(Math.random() * 52) + 1;
@@ -140,7 +140,7 @@ function PickTeam() {
             <div className="container centered-content">
               <p className="title">Your team...</p>
               <div className="columns is-multiline is-one-third  ">
-                {team.map((character) => {
+                {team.map((character: any) => {
                   return (
                     <CharacterCard
                       key={character.firstName}
