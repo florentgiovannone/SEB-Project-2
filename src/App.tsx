@@ -8,7 +8,6 @@ import Characters from "./components/characters";
 import CharacterModal from "./components/CharacterModal";
 import PickTeam from "./components/pickTeam";
 import image from "./assets/images/Got.webp"
-
 function App() {
   return (
     <Router>

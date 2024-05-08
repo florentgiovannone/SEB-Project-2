@@ -42,12 +42,12 @@ function Characters() {
         <div className="columns is-centered">
           <div className="container">
             <input
-              className="input is-dark mb-6 mt-6 is-rounded "
+              className="input background-is-grey is-grey is-rounded"
               placeholder="Search character..."
               onChange={handleChange}
               value={search}
             />
-            <div className="columns is-multiline ">
+            <div className="columns is-multiline is-centered">
               {filterCharacter()?.map((character) => {
                 return (
                   <div

@@ -1,36 +1,36 @@
-# Project 2 - Game of Thrones character React app
+# Project 2 - Game of Thrones Character React App
 
-## Table of contents
+## Summary
 
 - [Description](#description)
-- [Deployement](#deployement)
-- [Timeframe & Working Team](#timeframe--working-team)
+- [Instalation](#instalation)
+- [Technologies](#technologies)
+- [Timeframe & working team](#timeframe--working-team)
     - [Characters page](#characters)
     - [To battle page](#to-battle)
-    - [Sign-in  page](#sign-in)
+    - [Sign-up  page](#sign-in)
     - [Single character page](#character)
-- [Breif](#breif)
+- [Brief](#brief)
 - [Planning](#planning)
-- [Build Code Process](#build-code-process)
-    - [CharacterModal Component](#charactermodal-component)
-    - [Characters Component (with API Integration and State Management)](#characters-component-with-api-integration-and-state-management)
+- [Build code process](#build-code-process)
+    - [CharacterModal component](#charactermodal-component)
+    - [Characters component (with API integration and state management)](#characters-component-with-api-integration-and-state-management)
 - [Wins](#wins)
-- [Key Learning/Takeway ](#key-learningtakeaway)
+- [Key Learning and takeaway ](#key-learning-and-takeaway)
 - [Bugs](#Bugs)
-- [Future Improvements](#future-improvements)
+- [Future improvements](#future-improvements)
 
 
 ## Description
+This is our second project, and it was worked on as a pair. The brief was to choose a public API from which we could fetch and display information. We developed a React app using a Game of Thrones API. We aimed to showcase an array of techniques learned during class. The app contains the following features:
 
-We have developped a React app using a Game of thrones API. We wanted to display an array of technique learned during class. This app contain the following features:
+1/ Fetching a public API.
+2/ Mapping content of the API to a dedicated page.
+3/ Creating routes for each character (each character has its own page).
+4/ Implementing a front-end-only sign-in page.
+5/ Including a team-building page to assemble a team to defeat the White Walkers.
 
-1. Fetching a public API
-2. Mapping content of API in a dedicated page
-3. Creating routes for each character (each character have it's own page)
-4. Front end only Sign in page
-5. Team building page to go and defeat the white walkers
-
-## Deployement
+## Instalation
 We have use Netify to deploy our app
 
 [Link to the APP](https://majestic-pegasus-01f742.netlify.app/)
@@ -40,7 +40,14 @@ We have use Netify to deploy our app
 3. Run `npm i`
 4. Run `npm run dev` - This should then open a localhost page in your browser
 
-## Timeframe & Working Team 
+## Technologies
+- HTML
+- CSS 
+- Bulma
+- Sass 
+- React.JS
+
+## Timeframe & working team 
 This was a hack-a-thon (1.5 day) style project to be worked as a team of two. My pair was Conor Hamilton.
 We worked as partner programing style: 
 - We meet every 4 hours to discussed what would need to be done and split the work load evently 
@@ -56,11 +63,11 @@ Game of thrones API as information
 
 ![Characters](./assets/images/Screenshot%202024-03-11%20190218.png)
 
-### To Battle
+### To battle
 
 ![To Battle](./assets/images/Screenshot%202024-03-11%20190522.png)
 
-### Sign In
+### Sign up
 
 ![Sign in](./assets/images/Screenshot%202024-03-11%20190700.png)
 
@@ -78,7 +85,7 @@ The document structure had to use Different component using router and routes on
 Before starting we planned using wireframing 
 ![Wireframe](./assets/images/Screenshot%202024-03-06%20at%2015.34.20.png)
 
-We also had thourough sudo coding prior dividing tasks
+We also had thourough pseudo coding prior dividing tasks
 
 see document structure below
 
@@ -106,9 +113,21 @@ see document structure below
 
 ```
 
-## Build Code Process
+## Build code process
 
-### CharacterModal Component
+Conor and I initiated the project by setting up the React framework and structuring the components. Highlights of our collaboration include:
+
+- CharacterCard: A component for displaying character cards.
+- CharacterModal: A modal component for detailed character information.
+- Characters: The main component allowing users to search and view characters.
+- API Integration: Utilized `fetch` to retrieve character data from ThronesAPI.
+- State Management: Employed React hooks (`useState`, `useEffect`) for efficient data management and fetching.
+
+We were particularly proud of the CharacterModal component. It dynamically updates based on user selection, demonstrating our understanding of React's state management and prop handling.
+
+On a personal note I worked on the maping of the character's list and the whole routing on the App. I also looked at the search functionality 
+
+### CharacterModal component
 
 ```jsx
 function CharacterModal({ character, onClose }) {
@@ -128,7 +147,7 @@ function CharacterModal({ character, onClose }) {
 }
 ```
 
-### Characters Component (with API Integration and State Management)
+### Characters component (with API integration and state management)
 
 ```jsx
 function Characters() {
@@ -165,32 +184,31 @@ function Characters() {
 }
 ```
 
-Conor and I initiated the project by setting up the React framework and structuring the components. Highlights of our collaboration include:
-
-- CharacterCard: A component for displaying character cards.
-- CharacterModal: A modal component for detailed character information.
-- Characters: The main component allowing users to search and view characters.
-- API Integration: Utilized `fetch` to retrieve character data from ThronesAPI.
-- State Management: Employed React hooks (`useState`, `useEffect`) for efficient data management and fetching.
-
-We were particularly proud of the CharacterModal component. It dynamically updates based on user selection, demonstrating our understanding of React's state management and prop handling.
-
 ## Wins
-After this project I now feel much more comfident developing React app using an Api and external component
-Also working as a pair trained me for the first time to work as a team. doing regular checkup with my teammate made a big difference 
+Boosting Confidence in React Development:
+- Getting into React: I've really delved into React during this project! Understanding how components work, managing state effectively, and navigating lifecycle methods are all key skills I've honed.
+- APIs: Working with APIs can be tricky, but I've tackled it head-on. Integrating external data into my React app shows I've got a solid grasp on fetching and handling data from different sources.
+- External Components: It's awesome that I've explored using external components or libraries! By incorporating them into my project, I've shown a savvy approach to leveraging existing tools to make my app shine.
 
-## Key learning/Takeaway
-1/ Charater Routing 
-The first challenge arrive when routing the pages for each characters. We realised only after a while that the API we used was not filtering object by name but by ID number. To rectify this we simply replaced the URL of each character from the name to the ID number
+Teamwork and Communication:
+- Teamwork: Working alongside a teammate has been a game-changer. I've discovered the power of bouncing ideas off each other, dividing tasks, and lifting each other up when things get tough.
+- Check-ins: Those regular catch-ups have been really good! By staying in sync with my teammate, I've avoided roadblocks, and kept the project moving forward smoothly.
 
-2/ searching function 
-At first the serach function was working great, however one character kept appearing in every search. this was due to the fact that we use the Id number as key, we changed this to the fullname to fix this error 
+Accountability Partners: 
+- Being accountable to someone else can be surprisingly motivating. It's amazing how having a teammate to report progress to can keep me focused and driven to deliver my best work.
+
+## Key learning and takeaway
+1/ Character Routing: The first challenge arose when routing the pages for each character. We realized only after a while that the API we used was not filtering objects by name but by ID number. To rectify this, we simply replaced the URL of each character from the name to the ID number.
+
+2/ Searching Function: Initially, the search function was working great. However, one character kept appearing in every search. This was due to the fact that we used the ID number as the key. We changed this to the full name to fix this error.
 
 ## Bugs
-1.On the start missions modal we need to click on the modal itself rather than outside the modal to close it 
-2.When smaller resolutions view the App the Nav bar disappears. This is something I would have corrected given more time by implementing a hamburger button.
+1/ In the start missions modal, we need to click on the modal itself rather than outside the modal to close it.
+2/ When viewed on smaller resolutions, the navbar disappears. This is something I would have corrected given more time by implementing a hamburger button.
 
-## Future Improvements
-1. I would have liked more time to work on the responsiveness of the app for different resolutions.
-2. We did discuss implementing a quiz but did not have enough time to really give it our best.
-3. I would have liked to implement some game logic for the 'To Battle' page.
+## Future improvements
+1/ “I would have liked more time to work on the responsiveness of the app for different resolutions.” - This sentence is clear and grammatically correct, but you might consider adding specifics about what aspects of responsiveness you wanted to improve. For example: “I would have liked more time to optimize the responsiveness of the app, particularly for various screen sizes and orientations.”
+
+2/ “We did discuss implementing a quiz but did not have enough time to really give it our best.” - This sentence is also grammatically correct, but you could enhance clarity by specifying who discussed implementing the quiz. For example: “During our meetings, we discussed implementing a quiz feature, but unfortunately, we didn’t have enough time to fully develop it.”
+
+3/ “I would have liked to implement some game logic for the ‘To Battle’ page.” - This sentence is clear, but you might consider adding details about the specific game logic you wanted to implement. For instance: “I had ideas for incorporating more dynamic game logic into the ‘To Battle’ page, but due to time constraints, I couldn’t implement them.”
