@@ -8,11 +8,11 @@
 - [Timeframe & working team](#timeframe--working-team)
     - [Characters page](#characters)
     - [To battle page](#to-battle)
-    - [Sign-up  page](#sign-in)
+    - [Sign-up  page](#sign-up)
     - [Single character page](#character)
-- [Brief](#brief)
 - [Planning](#planning)
 - [Build code process](#build-code-process)
+    - [Character page (house details)](#character-page)
     - [CharacterModal component](#charactermodal-component)
     - [Characters component (with API integration and state management)](#characters-component-with-api-integration-and-state-management)
 - [Wins](#wins)
@@ -60,25 +60,21 @@ Hybrid CSS using Bulma as a framework  and some custom CSS
 Game of thrones API as information 
 
 ### Characters
-
-![Characters](./assets/images/Screenshot%202024-03-11%20190218.png)
+This page is where all the character of the api is displayed for the user to see
+![Characters](./src/assets/images/Screenshot%202024-03-11%20190218.png)
 
 ### To battle
-
-![To Battle](./assets/images/Screenshot%202024-03-11%20190522.png)
+This page is where the user can play and build a team to go and defeat the white walkers
+![To Battle](./src/assets/images/Screenshot%202024-03-11%20190522.png)
 
 ### Sign up
-
-![Sign in](./assets/images/Screenshot%202024-03-11%20190700.png)
+Simple signup page (not linked to any backend) 
+![Sign in](./src/assets/images/Screenshot%202024-03-11%20190700.png)
 
 ### Character
+Single character's page where the user can know a bit more about each character
+![Character Info](./src/assets/images/Screenshot%202024-03-11%20191536.png)
 
-![Character Info](./assets/images/Screenshot%202024-03-11%20191536.png)
-
-## Breif 
-The objective of this project was to build a React application using whta we learned during our classes lessons.
-This had to included APi fetching, Routing and mapping onl secting whta was needed from the API.
-The document structure had to use Different component using router and routes on the main app
 
 
 ## Planning 
@@ -125,7 +121,37 @@ Conor and I initiated the project by setting up the React framework and structur
 
 We were particularly proud of the CharacterModal component. It dynamically updates based on user selection, demonstrating our understanding of React's state management and prop handling.
 
-On a personal note I worked on the maping of the character's list and the whole routing on the App. I also looked at the search functionality 
+On a personal note I worked on:
+- the maping of the character's list and the whole routing on the App.
+- I looked at the search functionality 
+- I developped on each of the houses depending on who you would choose 
+
+### Character page
+Example of informsation given depending on what house they are from 
+```jsx
+ if (family.includes('Stark')) {
+        return <> <section>
+            <div className="m-6">
+                <div className="columns is-centered is-vcentered">
+                    <div className="column is-centered">
+                        <figure className="image is-centered is-fullwidth">
+                            <img className="is-square " src={image} />
+                        </figure>
+                    </div>
+                    <div className="column has-text-centered">
+                        <div className="bd-notification is-primary title">{`Title:`}</div>
+                        <div className="bd-notification is-primary mb-6">{title}</div>
+                        <div className="bd-notification is-primary title mt-6">{`Family:`}</div>
+                        <div className="bd-notification is-primary ">{family}</div>
+                        <div className="bd-notification is-primary title mt-6">{`About the House Stark`}</div>
+                        <p>{'Rulers of the North from the castle of Winterfell and the royal house of the independent Kingdom of the North. Retook their lands from House Bolton, who usurped House Stark at the Red Wedding, after the Battle of the Bastards. The house is ruled by Sansa Stark, the Queen in the North. The heir is Princess Arya Stark.'}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </>
+    }
+```
 
 ### CharacterModal component
 
