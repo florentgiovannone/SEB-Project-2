@@ -264,6 +264,6 @@ The second challenge was with the search function: we were able to search proper
 
 
 ## Future improvements
-1. "I would have liked more time to work on the responsiveness of the app for different resolutions." - This sentence is clear and grammatically correct, but you might consider adding specifics about what aspects of responsiveness you wanted to improve. For example: "I would have liked more time to optimize the responsiveness of the app, particularly for various screen sizes and orientations."
-2. "We did discuss implementing a quiz but did not have enough time to really give it our best." - This sentence is also grammatically correct, but you could enhance clarity by specifying who discussed implementing the quiz. For example: "During our meetings, we discussed implementing a quiz feature, but unfortunately, we didn’t have enough time to fully develop it."
-3. "I would have liked to implement some game logic for the 'To Battle' page." - This sentence is clear, but you might consider adding details about the specific game logic you wanted to implement. For instance: "I had ideas for incorporating more dynamic game logic into the 'To Battle' page, but due to time constraints, I couldn’t implement them."
+- I would have liked more time to work on the responsiveness of the app for different resolutions.
+- We did discuss implementing a quiz but did not have enough time to really give it our best.
+- I would have liked to implement some game logic for the 'To Battle' page.
